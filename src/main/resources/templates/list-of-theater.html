@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href="@{/list.css}" href="../static/list.css" rel="stylesheet" type="text/css">
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+  <title>Booked Tickets</title>
+</head>
+<body>
+<h1>Theaters List</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>name</th>
+    <th>location</th>
+    <th>movie</th>
+    <th>user</th>
+    <th>Action</th>
+  </tr>
+  <tr th:each="theaters : ${theater}">
+    <td th:text="${theaters.id}"></td>
+    <td th:text="${theaters.name}"></td>
+    <td th:text="${theaters.location}"></td>
+    <td th:each="movie :${theaters.movies}">
+      <p th:text="${movie.title}"></p>
+    </td>
+    <td th:each=" user :${theaters.user}">
+      <p th:text="${user.username}"></p>
+    </td>
+
+
+    <td class="border-bottom-0">
+<!--      <a th:href="@{'/updateTheater/' + ${theaters.id}}" class="btn btn-primary">Update</a><br><br>-->
+      <a th:href="@{'/deleteTheater/' + ${theaters.id}}" class="btn btn-primary">Delete</a>
+    </td>
+
+
+  </tr>
+</table>
+</body>
+</html>

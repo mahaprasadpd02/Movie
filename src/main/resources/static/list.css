@@ -1,0 +1,68 @@
+/* Reset some default styles */
+body, h1, table {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('image/background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 2px solid ;
+}
+
+th, td {
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+th {
+    background: linear-gradient(to bottom, #007BFF, #0056b3);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+
+
+a.btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+  background: radial-gradient(circle, #007BFF, #0056b3);
+    transition: background 0.3s;
+}
+
+a.btn:hover {
+    background: radial-gradient(circle, #0056b3, #003380);
+    transform: scale(1.05);
+    transition: background 0.3s, transform 0.3s;
+}

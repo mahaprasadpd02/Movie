@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Book Your Ticket</title>
+  <link th:href="@{/addTheater.css}" href="../static/addTheater.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Book Ticket</h1>
+<form method="post" th:action="@{/booknow}" th:object="${theater}">
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"  required="required">
+  </div>
+  <div>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location"  required="required">
+  </div>
+  <div>
+    <label for="movies">movies:</label>
+    <select id="movies" name="movies" >
+      <option th:each="movies : ${movieList}" th:value="${movies.id}" th:text="${movies.title}"></option>
+    </select>
+  </div>
+  <div>
+    <label for="theaters">theaters:</label>
+    <select id="theaters" name="theaters" >
+      <option th:each="theaters : ${theaterList}" th:value="${theaters.id}" th:text="${theaters.name}"></option>
+    </select>
+  </div>
+  <!-- Select a user for this theater -->
+  <div>
+    <table>
+      <tr>
+        <td>User: </td>
+        <td>
+          <select name="user" >
+            <option>Select</option>
+            <option th:each="user : ${userList}" th:value="${user.id}" th:text="${user.username}"></option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <button type="submit">Save</button>
+</form>
+</body>
+</html>

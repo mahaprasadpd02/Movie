@@ -1,0 +1,100 @@
+/* Reset some default styles */
+body, h1, p {
+     margin: 0;
+     padding: 0;
+       color:black;
+   background-image: url('image/background.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-position: center center;
+     font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    text-color:#fff ;
+    margin: 20px 0;
+    text-align: center;
+
+}
+
+form {
+      max-width: 400px;
+       margin: 0 auto;
+       padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+       color:black;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       border-radius: 5px;
+   }
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+     width: 50%;
+     padding: 10px 10px;
+     background-color: #333;
+     color: yellow;
+     border-radius: 1px;
+     color: yellow;
+     font-weight: bold;
+     margin: 10px 25%;
+     cursor: pointer;
+     border-radius: 1px;
+     text-align: center;
+
+ }
+
+a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
